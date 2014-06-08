@@ -108,7 +108,7 @@ fb.Router = Backbone.Router.extend({
     },
 
     revoke: function () {
-        $('#content').html('<div class="breadcrumb api">FB.api("/me/permissions", "delete");</div>');
+        $('#content').html('<div class="breadcrumb api">/me/permissions delete</div>');
         $('#content').append(new fb.views.Revoke().el);
     },
 

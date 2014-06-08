@@ -1,0 +1,84 @@
+{
+    "name": "Esteban Gam | size: M | Type: MB",
+    "children": [
+        {"name": "brand: Diamondback(32)"},
+        {"name": "brand: Ibis(76)"}, 
+        {"name": "brand: Pivot(180)"},
+        {
+            "name": "brand: Santa Cruz Bicycles(33)",
+            "children": [
+                {
+                    "name": "Bike: Tallboy 2 Carbon SPX XC - Complete $5599",
+                    "url": "/images/items/medium/SNZ/SNZ0364/MATBLA.jpg",
+                    "listPrice": "5599",
+                    "sku": "SNZ0364"
+                },
+                {
+                    "name": "Bike: Tallboy 2 Carbon XX1 ENVE - Complete $9153",
+                    "url": "/images/items/medium/SNZ/SNZ0365/MATBLA.jpg",
+                    "salePrice": "9153",
+                    "sku": "SNZ0365"
+                },
+                {
+                    "name": "Frame: Tallboy 2 Carbon Mountain Bike Frame $2899",
+                    "url": "/images/items/medium/SNZ/SNZ0366/GLOWHI.jpg",
+                    "salePrice": "2899",
+                    "sku": "SNZ0366",
+                    "children": [{
+                        "id": 17,
+                        "name": "Group Set: Shimano XT $5127.53",
+                        "totalPrice": 5127.53
+                    }, {
+                        "id": 18,
+                        "name": "Group Set: Shimano XTR $5940.65",
+                        "totalPrice": 5940.65
+                    }, {
+                        "id": 32,
+                        "name": "Group Set: SRAM X01 $5556.67",
+                        "totalPrice": 5556.67
+                    }]
+                },
+                {
+                    "name": "Frame: Bronson Carbon Mountain Bike Frame $2899",
+                    "url": "/images/items/medium/SNZ/SNZ0350/MATCAR.jpg",
+                    "salePrice": "2899",
+                    "sku": "SNZ0350",
+                    "children": [{
+                        "name": "Group Set: Shimano XT $5127.53",
+                        "totalPrice": 5127.53,
+                        "children": [
+                            {
+                                "name": "Seatpost: EA70 Seatpost OE One Color, $26.22",
+                                "sku": "TTT000C"
+                            },
+                            {
+                                "name": "Saddle: SL Kit Carbonio Saddle, $45",
+                                "sku": "TTT000C"
+                            },
+                            {
+                                "name": "Pedals: Candy 11 Pedals, $338.46",
+                                "sku": "TTT000C"
+                            },
+                            {
+                                "name": "Grips: Moab OE Grip, $3.75",
+                                "sku": "TTT000C"
+                            },
+                            {
+                                "name": "Steam: EA70 Stem OE, $22.94",
+                                "sku": "TTT000C"
+                            }
+                        ]
+                    }, {
+                        "name": "Group Set: Shimano XTR $5940.65",
+                        "totalPrice": 5940.65
+                    }, {
+                        "name": "Group Set: SRAM X01 $5556.67",
+                        "totalPrice": 5556.67
+                    }]
+                }
+            ]
+        },
+        {"name": "brand: Juliana(129)"},
+        {"name": "brand: Merlin(11)"},
+        {"name": "brand: Intense Cycles(4)"}
+    ]}
