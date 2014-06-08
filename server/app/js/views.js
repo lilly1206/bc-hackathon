@@ -304,3 +304,17 @@ fb.views.Revoke = Backbone.View.extend({
     }
 
 });
+
+fb.views.About = Backbone.View.extend({
+
+    initialize: function () {
+        this.template = _.template(fb.templateLoader.get('about'));
+        this.render();
+    },
+
+    render: function () {
+        this.$el.html(this.template());
+        return this;
+    }
+
+});

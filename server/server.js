@@ -47,6 +47,7 @@ server.listen(app.get('port'), function () {
 });*/
 
 app.get('/getComponents', bikeService.getComponents);
+app.get('/getGruppos', bikeService.getGruppos);
 /*app.get('/user', user.findAll);
 app.get('/user/:id', user.findById);
 app.post('/user', user.addUser);

@@ -12,7 +12,8 @@ fb.Router = Backbone.Router.extend({
         "person/:id/feed":          "feed",
         "revoke":                   "revoke",
         "post":                     "post",
-        "postui":                   "postui"
+        "postui":                   "postui",
+        "about":                    "about"
     },
 
     initialize: function() {
@@ -34,7 +35,7 @@ fb.Router = Backbone.Router.extend({
 
     person: function (id) {
         var self = this;
-        $('#content').html('<div class="breadcrumb api">FB.api("/' + id + '");</div>');
+        $('#content').html('<div class="breadcrumb api">/' + id + '</div>');
         try {
             FB.api("/" + id, function (response) {
                 if (response.error) {
@@ -111,6 +112,11 @@ fb.Router = Backbone.Router.extend({
         $('#content').append(new fb.views.Revoke().el);
     },
 
+    about: function () {
+        $('#content').html('<div class="breadcrumb api">/about us</div>');
+        $('#content').append(new fb.views.About().el);
+    },
+
     showErrorPage: function () {
         $('#content').append(new fb.views.Error().el);
     }
@@ -120,7 +126,7 @@ fb.Router = Backbone.Router.extend({
 $(document).on('ready', function() {
     fb.user = new fb.models.Person(); // Holds the authenticated Facebook user
     // Load HTML templates for the app
-    fb.templateLoader.load(['shell', 'welcome', 'login', 'person', 'friends', 'feed', 'post', 'postui', 'error', 'revoke'], function () {
+    fb.templateLoader.load(['about', 'shell', 'welcome', 'login', 'person', 'friends', 'feed', 'post', 'postui', 'error', 'revoke'], function () {
         fb.shell = new fb.views.Shell({el: "#shell", model: fb.user});
         fb.router = new fb.Router();
         Backbone.history.start();
