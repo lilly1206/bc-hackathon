@@ -35,7 +35,7 @@ exports.getGruppos = function(req, res) {
     var data = {
     '_dyncharset' : 'UTF-8',
     '_DARGS'      : '/Store/catalog/include/bikeBuilderInit.jsp.ajaxform-getGruppos',
-    '/backcountry/catalog/bikebuilder/formhandler/BikeBuilderFormHandler.frameSkuId': 'PIN0139',
+    '/backcountry/catalog/bikebuilder/formhandler/BikeBuilderFormHandler.frameSkuId': 'SNZ0366',
     '/backcountry/catalog/bikebuilder/formhandler/BikeBuilderFormHandler.useMockResponse' : 'false',
     '_D:/backcountry/catalog/bikebuilder/formhandler/BikeBuilderFormHandler.frameSkuId': null,
     '_D:/backcountry/catalog/bikebuilder/formhandler/BikeBuilderFormHandler.useMockResponse': null,

@@ -72,3 +72,18 @@ form label {
   font-family: Montserrat, Helvetica, sans-serif;
   text-shadow: none;
 }
+
+/* line 2, ../sass/_about.scss */
+#aboutUs .image-profile {
+  width: 20%;
+}
+/* line 5, ../sass/_about.scss */
+#aboutUs .description {
+  width: 70%;
+}
+/* line 8, ../sass/_about.scss */
+#aboutUs div {
+  float: left;
+  margin-left: 10px;
+  margin-bottom: 20px;
+}

@@ -1,0 +1,62 @@
+{
+    "name": "Esteban Gam | size: M | Type: MB",
+    "children": [
+        {"name": "brand: Diamondback(32)"},
+        {"name": "brand: Ibis(76)"}, 
+        {"name": "brand: Pivot(180)"},
+        {
+            "name": "brand: Santa Cruz Bicycles(33)",
+            "children": [
+                {
+                    "name": "Tallboy 2 Carbon SPX XC - Complete $5599",
+                    "url": "/images/items/medium/SNZ/SNZ0364/MATBLA.jpg",
+                    "listPrice": "5599",
+                    "id": "SNZ0364"
+                },
+                {
+                    "name": "Tallboy 2 Carbon XX1 ENVE - Complete $9153",
+                    "url": "/images/items/medium/SNZ/SNZ0365/MATBLA.jpg",
+                    "salePrice": "9153",
+                    "id": "SNZ0365"
+                },
+                {
+                    "name": "Tallboy 2 Carbon Mountain Bike Frame $2899",
+                    "url": "/images/items/medium/SNZ/SNZ0366/GLOWHI.jpg",
+                    "salePrice": "2899",
+                    "id": "SNZ0366",
+                    "children": [{
+                        "id": 17,
+                        "name": "Shimano XT $5127.53",
+                        "totalPrice": 5127.53
+                    }, {
+                        "id": 18,
+                        "name": "Shimano XTR $5940.65",
+                        "totalPrice": 5940.65
+                    }, {
+                        "id": 32,
+                        "name": "SRAM X01 $5556.67",
+                        "totalPrice": 5556.67
+                    }]
+                },
+                {
+                    "name": "Bronson Carbon Mountain Bike Frame $2899",
+                    "url": "/images/items/medium/SNZ/SNZ0350/MATCAR.jpg",
+                    "salePrice": "2899",
+                    "id": "SNZ0350",
+                    "children": [{
+                        "name": "Shimano XT $5127.53",
+                        "totalPrice": 5127.53
+                    }, {
+                        "name": "Shimano XTR $5940.65",
+                        "totalPrice": 5940.65
+                    }, {
+                        "name": "SRAM X01 $5556.67",
+                        "totalPrice": 5556.67
+                    }]
+                }
+            ]
+        },
+        {"name": "brand: Juliana(129)"},
+        {"name": "brand: Merlin(11)"},
+        {"name": "brand: Intense Cycles(4)"}
+    ]}
