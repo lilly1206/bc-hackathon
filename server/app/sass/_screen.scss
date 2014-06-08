@@ -2,15 +2,104 @@ $gray: #fafafa;
 $red: #c00;
 $fontstack: Montserrat, Helvetica, sans-serif;
 
-h1{
-	font-family: Montserrat, Helvetica, sans-serif;
-	color: #000;
-	text-shadow: #000;
+$base-font-size: 16px;
+$base-line-height: 24px;
+$rhythm-unit: "rem";
+
+@mixin font-size($sizeValue: 1.6) {
+  font-size: ($sizeValue * 10) + px;
+  font-size: $sizeValue + rem;
+}
+
+@function strip-unit($num) {
+  @return $num / ($num * 0 + 1);
+}
+
+@mixin rem-fallback($property, $values...) {
+  $max: length($values);
+  $pxValues: '';
+  $remValues: '';
+
+  @for $i from 1 through $max {
+    $value: strip-unit(nth($values, $i));
+    $pxValues: #{$pxValues + $value*16}px;
+
+    @if $i < $max {
+      $pxValues: #{$pxValues + " "};
+    }
+  } 
+
+  @for $i from 1 through $max {
+    $value: strip-unit(nth($values, $i));
+    $remValues: #{$remValues + $value}rem;
+
+    @if $i < $max {
+      $remValues: #{$remValues + " "};
+    }
+  } 
+  
+  #{$property}: $pxValues; 
+  #{$property}: $remValues; 
+}
+
+body{
+	font-family: $fontstack;
 }
 
 .jumbotron{
 	&:after{
 		background: url(../img/header.jpg) no-repeat 0 0;
 		background-size: cover;
+		opacity: 1;
 	}
+	&.masthead{
+		background: none;
+		padding: 80px 0;
+	}
+	p{
+		float: right;
+		margin-top: 3rem;
+		width: 100%;
+		a{
+			margin:0 auto;
+		}
+	}
+	h1{
+		font-family: Montserrat, Helvetica, sans-serif;
+		color: #fff;
+		text-shadow: none;
+		@include font-size(3);
+		text-align: center;
+		@include rem-fallback(margin, 0, 2, 0, 0);
+		width: 100%;
+		float: right;
+	}
+	.header-text{
+		width: 34rem;
+		float: right;
+	}
+}
+
+form{
+	width: 9rem;
+	p{
+		float: left;
+		width: 100%;
+	}
+	input{
+		width: 30px;
+		float: right;
+	}
+	label{
+		float: left;
+		font-size: 0.75rem;
+		line-height: 2rem;
+	}
+}
+.btn{
+	border: none;
+	border-radius: 0;
+	background-image: none;
+	font-family: $fontstack;
+	text-shadow: none;
 }

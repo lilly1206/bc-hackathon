@@ -1,12 +1,74 @@
-/* line 5, ../sass/_screen.scss */
-h1 {
+/* line 45, ../sass/_screen.scss */
+body {
   font-family: Montserrat, Helvetica, sans-serif;
-  color: #000;
-  text-shadow: #000;
 }
 
-/* line 12, ../sass/_screen.scss */
+/* line 50, ../sass/_screen.scss */
 .jumbotron:after {
   background: url(../img/header.jpg) no-repeat 0 0;
   background-size: cover;
+  opacity: 1;
+}
+/* line 55, ../sass/_screen.scss */
+.jumbotron.masthead {
+  background: none;
+  padding: 80px 0;
+}
+/* line 59, ../sass/_screen.scss */
+.jumbotron p {
+  float: right;
+  margin-top: 3rem;
+  width: 100%;
+}
+/* line 63, ../sass/_screen.scss */
+.jumbotron p a {
+  margin: 0 auto;
+}
+/* line 67, ../sass/_screen.scss */
+.jumbotron h1 {
+  font-family: Montserrat, Helvetica, sans-serif;
+  color: #fff;
+  text-shadow: none;
+  font-size: 30px;
+  font-size: 3rem;
+  text-align: center;
+  margin: 0px 32px 0px 0px;
+  margin: 0rem 2rem 0rem 0rem;
+  width: 100%;
+  float: right;
+}
+/* line 77, ../sass/_screen.scss */
+.jumbotron .header-text {
+  width: 34rem;
+  float: right;
+}
+
+/* line 83, ../sass/_screen.scss */
+form {
+  width: 9rem;
+}
+/* line 85, ../sass/_screen.scss */
+form p {
+  float: left;
+  width: 100%;
+}
+/* line 89, ../sass/_screen.scss */
+form input {
+  width: 30px;
+  float: right;
+}
+/* line 93, ../sass/_screen.scss */
+form label {
+  float: left;
+  font-size: 0.75rem;
+  line-height: 2rem;
+}
+
+/* line 99, ../sass/_screen.scss */
+.btn {
+  border: none;
+  border-radius: 0;
+  background-image: none;
+  font-family: Montserrat, Helvetica, sans-serif;
+  text-shadow: none;
 }
