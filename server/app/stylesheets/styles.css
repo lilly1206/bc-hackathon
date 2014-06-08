@@ -44,31 +44,62 @@ body {
 }
 
 /* line 83, ../sass/_screen.scss */
+.measurements {
+  margin-top: 2rem;
+  width: 32rem;
+  float: left;
+}
+/* line 87, ../sass/_screen.scss */
+.measurements h3 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* line 93, ../sass/_screen.scss */
 form {
   width: 9rem;
+  float: left;
+  margin-right: 1rem;
 }
-/* line 85, ../sass/_screen.scss */
+/* line 97, ../sass/_screen.scss */
 form p {
   float: left;
   width: 100%;
 }
-/* line 89, ../sass/_screen.scss */
+/* line 101, ../sass/_screen.scss */
 form input {
   width: 30px;
   float: right;
 }
-/* line 93, ../sass/_screen.scss */
+/* line 105, ../sass/_screen.scss */
 form label {
   float: left;
   font-size: 0.75rem;
   line-height: 2rem;
 }
 
-/* line 99, ../sass/_screen.scss */
+/* line 111, ../sass/_screen.scss */
 .btn {
   border: none;
   border-radius: 0;
   background-image: none;
   font-family: Montserrat, Helvetica, sans-serif;
   text-shadow: none;
+}
+
+/* line 118, ../sass/_screen.scss */
+.how-to {
+  float: left;
+  width: 22rem;
+  margin-top: 0.5rem;
+}
+/* line 122, ../sass/_screen.scss */
+.how-to img {
+  width: 100%;
+}
+
+/* line 128, ../sass/_screen.scss */
+map area {
+  background: #cc0000;
+  display: block;
 }
