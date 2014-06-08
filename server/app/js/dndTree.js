@@ -104,7 +104,7 @@ treeJSON = d3.json("js/flare.json", function(error, treeData) {
     function initiateDrag(d, domNode) {
         draggingNode = d;
         //d3.select(domNode).select('.ghostCircle').attr('pointer-events', 'none');
-        d3.select(domNode).select('.ghostCircle').attr('class', 'ghostCircle show');
+        //d3.select(domNode).select('.ghostCircle').attr('class', 'ghostCircle show');
         //d3.selectAll('.ghostCircle').attr('class', 'ghostCircle show');
         //d3.select(domNode).attr('class', 'node activeDrag');
         return;
@@ -331,9 +331,9 @@ treeJSON = d3.json("js/flare.json", function(error, treeData) {
     // Toggle children on click.
 
     function click(d) {
-        if (d3.event.defaultPrevented) return; // click suppressed
+        /*if (d3.event.defaultPrevented) return; // click suppressed
         d = toggleChildren(d);
-        update(d);
+        update(d);*/
         centerNode(d);
     }
 
@@ -354,7 +354,7 @@ treeJSON = d3.json("js/flare.json", function(error, treeData) {
             }
         };
         childCount(0, root);
-        var newHeight = d3.max(levelWidth) * 25; // 25 pixels per line  
+        var newHeight = d3.max(levelWidth) * 45; // 25 pixels per line  
         tree = tree.size([newHeight, viewerWidth]);
 
         // Compute the new tree layout.
@@ -363,7 +363,7 @@ treeJSON = d3.json("js/flare.json", function(error, treeData) {
 
         // Set widths between levels based on maxLabelLength.
         nodes.forEach(function(d) {
-            d.y = (d.depth * (maxLabelLength * 10)); //maxLabelLength * 10px
+            d.y = (d.depth * (maxLabelLength * 9)); //maxLabelLength * 10px
             // alternatively to keep a fixed scale one can set a fixed depth per level
             // Normalize for fixed-depth by commenting out below line
             // d.y = (d.depth * 500); //500px per level.
@@ -403,6 +403,23 @@ treeJSON = d3.json("js/flare.json", function(error, treeData) {
                 return d.name;
             })
             .style("fill-opacity", 0);
+
+        nodeEnter.append("a").attr("xlink:href", function(d) {return d.sku})
+            .attr('class', 'skutrigger')
+            .attr('data-toggle', 'modal')
+            .attr('data-target', '.bs-example-modal-lg')
+            .append("text")
+            .attr("x", function(d) {
+                return d.children || d._children ? -10 : 10;
+            })
+            .attr("dy", "-0.7em")
+            .attr('class', 'nodeText')
+            .attr("text-anchor", function(d) {
+                return d.children || d._children ? "end" : "start";
+            })
+            .text(function(d) {
+                return d.sku;
+            })
 
         // phantom node to give us mouseover in a radius around it
         nodeEnter.append("circle")
@@ -507,6 +524,16 @@ treeJSON = d3.json("js/flare.json", function(error, treeData) {
             d.x0 = d.x;
             d.y0 = d.y;
         });
+        $('.skutrigger').on('click', function(){
+            var jqxhr = $.ajax({
+                url: 'http://hackathon.backcountry.com:8081/hackathon/public/product/v1/products/'+$(this).text(),
+                type: 'GET',
+                crossDomain: true,
+                dataType: 'jsonp',
+                success: function(result) { productDetail(result); },
+                error: function() { alert('Failed!'); },
+            });
+        });
     }
 
     // Append a group which holds all nodes and which the zoom Listener can act upon.
@@ -521,3 +548,35 @@ treeJSON = d3.json("js/flare.json", function(error, treeData) {
     update(root);
     centerNode(root);
 });
+var hola = null;
+function productDetail(result){
+    var bcUrl = "http://www.backcountry.com/";
+    console.log(result);
+    $('#pruductTitle').html(result.products[0].title);
+    $('#pruductImage').attr('src', bcUrl+result.products[0].skus[0].image.url);
+    $('#pruductDesc').html(result.products[0].description);
+    hola = result;
+    $('#shareMe').on('click', sharingFB);
+}
+
+function sharingFB() {
+    var bcUrl = "http://www.backcountry.com/";
+    FB.ui(
+        {
+            method:'feed',
+            name:hola.products[0].title,
+            link:bcUrl+hola.products[0].skus[0].url,
+            picture: bcUrl+hola.products[0].skus[0].image.url,
+            caption:'by My Competitive Bike',
+            description:hola.products[0].shortDescription
+        },
+        function (response) {
+            if (response && response.id) {
+                alert('Your post was published.');
+            } else {
+                alert('Your post was not published.');
+            }
+        }
+    );
+    return false;
+}
