@@ -80,8 +80,20 @@ body{
 	}
 }
 
+.measurements{
+	margin-top: 2rem;
+	width: 32rem;
+	float: left;
+	h3{
+		text-align: center;
+		margin-bottom: 1rem;
+	}
+}
+
 form{
 	width: 9rem;
+	float: left;
+	margin-right: 1rem;
 	p{
 		float: left;
 		width: 100%;
@@ -102,4 +114,19 @@ form{
 	background-image: none;
 	font-family: $fontstack;
 	text-shadow: none;
+}
+.how-to{
+	float: left;
+	width: 22rem;
+	margin-top: 0.5rem;
+	img{
+		width: 100%;
+	}
+}
+
+map{
+	area{
+		background: $red;
+		display: block;
+	}
 }
