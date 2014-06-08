@@ -55,6 +55,36 @@ fb.views.Welcome = Backbone.View.extend({
             $('.btn-login', this.el).removeClass('hidden');
             $('.btn-profile', this.el).addClass('hidden');
         }
+    },
+
+    events: {
+        'mouseover #measurements-form a': 'showLink',
+        'mouseout #measurements-form a': 'hideLink',
+        'click input[type="submit"]': 'submitMeasurements',
+        'click a.edit': 'editMeasurements'
+
+    },
+
+    showLink: function(e){
+        var linkClass = $(e.currentTarget).attr('class');
+        $('#'+linkClass).addClass('visible');
+    },
+
+    hideLink: function(e){
+        var linkClass = $(e.currentTarget).attr('class');
+        $('#'+linkClass).removeClass('visible');
+    },
+
+    submitMeasurements: function(e){
+        e.preventDefault();
+        $('.measurements').fadeOut();
+        $('.info').fadeIn();
+    },
+
+    editMeasurements: function(e){
+        e.preventDefault();
+        $('.measurements').fadeIn();
+        $('.info').fadeOut();
     }
 
 });

@@ -46,6 +46,19 @@ body{
 	font-family: $fontstack;
 }
 
+label, dt{
+	font-weight: normal;
+}
+
+dt{
+	float: left;
+}
+
+dd{
+	font-size: 0.8rem;
+	float: right;
+}
+
 .jumbotron{
 	&:after{
 		background: url(../img/header.jpg) no-repeat 0 0;
@@ -86,7 +99,67 @@ body{
 	float: left;
 	h3{
 		text-align: center;
-		margin-bottom: 1rem;
+		margin-bottom: 2rem;
+	}
+	.options{
+		width: 32rem;
+		float: left;
+		margin-bottom: 3rem;
+		div{
+			width: 8em;
+			margin-right: 1rem;
+			float: left;
+			h5{
+				text-align: center;
+			}
+			a{
+				display: block;
+				text-indent: -9999px;
+				background: url(../img/sprite.png) no-repeat 0 0;
+				height: 50px;
+				width: 50px;
+				background-size: 100%;
+				float: left;
+				margin-right: 0.5rem;
+				&:last-child{
+					margin-right: 0;
+				}
+				&#male{
+					background-position: 0 -250px;
+				}
+				&#female{
+					background-position: 0 -150px;
+				}
+				&#road{
+					background-position: 0 -200px;
+				}
+				&#mountain{
+					background-position: 0 -50px;
+				}
+				&#triathlon{
+					background-position: 0 0;
+				}
+				&#in{
+					background-position: 0 -297px;
+					background-size: 98%;
+				}
+				&#cm{
+					background-position: 0 -100px;
+				}
+			}
+			&.ride{
+				width: 14rem;
+				a{
+					margin-right: 1.5rem;
+				}
+			}
+			&.units{
+				width: 7rem;
+			}
+			&:last-child{
+				margin: 0;
+			}
+		}
 	}
 }
 
@@ -102,10 +175,14 @@ form{
 		width: 30px;
 		float: right;
 	}
-	label{
+	a{
 		float: left;
 		font-size: 0.75rem;
+		color: #000;
 		line-height: 2rem;
+		&:hover{
+			color: $red;
+		}
 	}
 }
 .btn{
@@ -117,16 +194,59 @@ form{
 }
 .how-to{
 	float: left;
-	width: 22rem;
-	margin-top: 0.5rem;
-	img{
-		width: 100%;
+	width: 300px;
+	height: 309px;
+	position: relative;
+	margin-top: 2rem;
+	margin-left: 1rem;
+	background-image: url(../img/vitruvian.jpg);
+	a{
+		display: none;
+		border: 1px dashed #000;
+		&.visible{
+			display: block;
+		}
 	}
 }
-
-map{
-	area{
-		background: $red;
-		display: block;
+.info{
+	display: none;
+	width: 26rem;
+	margin-top: 2rem;
+	h3{
+		font-size: 1.2rem;
+		margin:0;
+	}
+	.left{
+		width: 47%;
+		float: left;
+		padding-right: 3%;
+		border-right: 2px solid #ddd;
+		dl{
+			width: 100%;
+			dt{
+				float: left;
+				width: 71%;
+				line-height: 1.8rem;
+			}
+			dd{
+				float: right;
+				width: 25%;
+				text-align: right;
+				margin-left: 0;
+				line-height: 1.8rem;
+			}
+		}
+	}
+	.right{
+		width: 47%;
+		float: right;
+		label{
+			float: left;
+			line-height: 2rem;
+		}
+		select{
+			width: 7rem;
+			float: right;
+		}
 	}
 }

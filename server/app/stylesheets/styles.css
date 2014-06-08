@@ -3,28 +3,44 @@ body {
   font-family: Montserrat, Helvetica, sans-serif;
 }
 
-/* line 50, ../sass/_screen.scss */
+/* line 49, ../sass/_screen.scss */
+label, dt {
+  font-weight: normal;
+}
+
+/* line 53, ../sass/_screen.scss */
+dt {
+  float: left;
+}
+
+/* line 57, ../sass/_screen.scss */
+dd {
+  font-size: 0.8rem;
+  float: right;
+}
+
+/* line 63, ../sass/_screen.scss */
 .jumbotron:after {
   background: url(../img/header.jpg) no-repeat 0 0;
   background-size: cover;
   opacity: 1;
 }
-/* line 55, ../sass/_screen.scss */
+/* line 68, ../sass/_screen.scss */
 .jumbotron.masthead {
   background: none;
   padding: 80px 0;
 }
-/* line 59, ../sass/_screen.scss */
+/* line 72, ../sass/_screen.scss */
 .jumbotron p {
   float: right;
   margin-top: 3rem;
   width: 100%;
 }
-/* line 63, ../sass/_screen.scss */
+/* line 76, ../sass/_screen.scss */
 .jumbotron p a {
   margin: 0 auto;
 }
-/* line 67, ../sass/_screen.scss */
+/* line 80, ../sass/_screen.scss */
 .jumbotron h1 {
   font-family: Montserrat, Helvetica, sans-serif;
   color: #fff;
@@ -37,48 +53,129 @@ body {
   width: 100%;
   float: right;
 }
-/* line 77, ../sass/_screen.scss */
+/* line 90, ../sass/_screen.scss */
 .jumbotron .header-text {
   width: 34rem;
   float: right;
 }
 
-/* line 83, ../sass/_screen.scss */
+/* line 96, ../sass/_screen.scss */
 .measurements {
   margin-top: 2rem;
   width: 32rem;
   float: left;
 }
-/* line 87, ../sass/_screen.scss */
+/* line 100, ../sass/_screen.scss */
 .measurements h3 {
   text-align: center;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
+}
+/* line 104, ../sass/_screen.scss */
+.measurements .options {
+  width: 32rem;
+  float: left;
+  margin-bottom: 3rem;
+}
+/* line 108, ../sass/_screen.scss */
+.measurements .options div {
+  width: 8em;
+  margin-right: 1rem;
+  float: left;
+}
+/* line 112, ../sass/_screen.scss */
+.measurements .options div h5 {
+  text-align: center;
+}
+/* line 115, ../sass/_screen.scss */
+.measurements .options div a {
+  display: block;
+  text-indent: -9999px;
+  background: url(../img/sprite.png) no-repeat 0 0;
+  height: 50px;
+  width: 50px;
+  background-size: 100%;
+  float: left;
+  margin-right: 0.5rem;
+}
+/* line 124, ../sass/_screen.scss */
+.measurements .options div a:last-child {
+  margin-right: 0;
+}
+/* line 127, ../sass/_screen.scss */
+.measurements .options div a#male {
+  background-position: 0 -250px;
+}
+/* line 130, ../sass/_screen.scss */
+.measurements .options div a#female {
+  background-position: 0 -150px;
+}
+/* line 133, ../sass/_screen.scss */
+.measurements .options div a#road {
+  background-position: 0 -200px;
+}
+/* line 136, ../sass/_screen.scss */
+.measurements .options div a#mountain {
+  background-position: 0 -50px;
+}
+/* line 139, ../sass/_screen.scss */
+.measurements .options div a#triathlon {
+  background-position: 0 0;
+}
+/* line 142, ../sass/_screen.scss */
+.measurements .options div a#in {
+  background-position: 0 -297px;
+  background-size: 98%;
+}
+/* line 146, ../sass/_screen.scss */
+.measurements .options div a#cm {
+  background-position: 0 -100px;
+}
+/* line 150, ../sass/_screen.scss */
+.measurements .options div.ride {
+  width: 14rem;
+}
+/* line 152, ../sass/_screen.scss */
+.measurements .options div.ride a {
+  margin-right: 1.5rem;
+}
+/* line 156, ../sass/_screen.scss */
+.measurements .options div.units {
+  width: 7rem;
+}
+/* line 159, ../sass/_screen.scss */
+.measurements .options div:last-child {
+  margin: 0;
 }
 
-/* line 93, ../sass/_screen.scss */
+/* line 166, ../sass/_screen.scss */
 form {
   width: 9rem;
   float: left;
   margin-right: 1rem;
 }
-/* line 97, ../sass/_screen.scss */
+/* line 170, ../sass/_screen.scss */
 form p {
   float: left;
   width: 100%;
 }
-/* line 101, ../sass/_screen.scss */
+/* line 174, ../sass/_screen.scss */
 form input {
   width: 30px;
   float: right;
 }
-/* line 105, ../sass/_screen.scss */
-form label {
+/* line 178, ../sass/_screen.scss */
+form a {
   float: left;
   font-size: 0.75rem;
+  color: #000;
   line-height: 2rem;
 }
+/* line 183, ../sass/_screen.scss */
+form a:hover {
+  color: #cc0000;
+}
 
-/* line 111, ../sass/_screen.scss */
+/* line 188, ../sass/_screen.scss */
 .btn {
   border: none;
   border-radius: 0;
@@ -87,19 +184,74 @@ form label {
   text-shadow: none;
 }
 
-/* line 118, ../sass/_screen.scss */
+/* line 195, ../sass/_screen.scss */
 .how-to {
   float: left;
-  width: 22rem;
-  margin-top: 0.5rem;
+  width: 300px;
+  height: 309px;
+  position: relative;
+  margin-top: 2rem;
+  margin-left: 1rem;
+  background-image: url(../img/vitruvian.jpg);
 }
-/* line 122, ../sass/_screen.scss */
-.how-to img {
-  width: 100%;
+/* line 203, ../sass/_screen.scss */
+.how-to a {
+  display: none;
+  border: 1px dashed #000;
+}
+/* line 206, ../sass/_screen.scss */
+.how-to a.visible {
+  display: block;
 }
 
-/* line 128, ../sass/_screen.scss */
-map area {
-  background: #cc0000;
-  display: block;
+/* line 211, ../sass/_screen.scss */
+.info {
+  display: none;
+  width: 26rem;
+  margin-top: 2rem;
+}
+/* line 215, ../sass/_screen.scss */
+.info h3 {
+  font-size: 1.2rem;
+  margin: 0;
+}
+/* line 219, ../sass/_screen.scss */
+.info .left {
+  width: 47%;
+  float: left;
+  padding-right: 3%;
+  border-right: 2px solid #ddd;
+}
+/* line 224, ../sass/_screen.scss */
+.info .left dl {
+  width: 100%;
+}
+/* line 226, ../sass/_screen.scss */
+.info .left dl dt {
+  float: left;
+  width: 71%;
+  line-height: 1.8rem;
+}
+/* line 231, ../sass/_screen.scss */
+.info .left dl dd {
+  float: right;
+  width: 25%;
+  text-align: right;
+  margin-left: 0;
+  line-height: 1.8rem;
+}
+/* line 240, ../sass/_screen.scss */
+.info .right {
+  width: 47%;
+  float: right;
+}
+/* line 243, ../sass/_screen.scss */
+.info .right label {
+  float: left;
+  line-height: 2rem;
+}
+/* line 247, ../sass/_screen.scss */
+.info .right select {
+  width: 7rem;
+  float: right;
 }

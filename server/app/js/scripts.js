@@ -1,3 +1,10 @@
-	$(document).ready(function(){
-		$('area').data('maphilight');
-	});
+	// $(document).ready(function(){
+	// 	alert('READY!');
+	// 	$('#inseam-lbl').on('click', function(e){
+	// 		// $('#inseam').mouseenter();
+	// 		alert('O HAI!');
+	// 		e.preventDefault();
+	// 	}).on('mouseleave', function(e) {
+ //    	$('#inseam').mouseleave();
+	// 	});
+	// });
