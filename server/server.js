@@ -1,9 +1,8 @@
 var express = require('express'),
     path = require('path'),
     http = require('http'),
-    io = require('socket.io');
-    /*user = require('./routes/user');
-    session = require('./routes/session');*/
+    io = require('socket.io'),
+    bikeService = require('./routes/bikeService');
 
 var app = express();
 
@@ -39,14 +38,15 @@ server.listen(app.get('port'), function () {
     console.log("Express server listening on port " + app.get('port'));
 });
 
-/*/ include this middleware before any middleware/routes that is suspected of triggering the error
-app.use(function(req, res, next) {
+// include this middleware before any middleware/routes that is suspected of triggering the error
+/*app.use(function(req, res, next) {
   res.on('header', function() {
     console.trace('HEADERS GOING TO BE WRITTEN');
   });
   next();
 });*/
-    
+
+app.get('/getComponents', bikeService.getComponents);
 /*app.get('/user', user.findAll);
 app.get('/user/:id', user.findById);
 app.post('/user', user.addUser);
