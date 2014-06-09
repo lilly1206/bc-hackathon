@@ -13,7 +13,143 @@
     <tr><td>timezone</td><td><%= timezone %></td></tr>
 </table>
 
+<div class="measurements">
+    <div class="options">
+      <div class="gender">
+        <h5>You are...</h5>
+        <a href="#" id="male">Male</a>
+        <a href="#" id="female">Female</a>
+      </div>
+      <div class="ride">
+        <h5>Looking to ride...</h5>
+        <a href="#" id="road">Road</a>
+        <a href="#" id="mountain">Mountain</a>
+        <a href="#" id="triathlon">Triathlon</a>
+      </div>
+      <div class="units">
+        <h5>Unit...</h5>
+        <a href="#" id="cm">cm</a>
+        <a href="#" id="in">in</a>
+      </div>
+    </div>
+    <h3>Your measurements</h3>
+    <form id="measurements-form">
+        <p><a href="http://www.youtube.com/watch?v=6_-zpSXQzsA" class="inseam" title="Click to watch a how-to video" target="_blank">Actual inseam</a><input type="text" placeholder="cm" /></p>
+        <p><a href="http://www.youtube.com/watch?v=ktnHPu8Uy0c" class="trunk" title="Click to watch a how-to video" target="_blank">Trunk</a><input type="text" placeholder="cm" /></p>
+        <p><a href="http://youtu.be/YQ6iM5EGmPg" class="forearm" title="Click to watch a how-to video" target="_blank">Forearm</a><input type="text" placeholder="cm" /></p>
+        <p><a href="http://youtu.be/M_TUSEMIY_g" class="arm" title="Click to watch a how-to video" target="_blank">Arm</a><input type="text" placeholder="cm" /></p>
+        <p><a href="http://youtu.be/rHbA9qgKIYk" class="thigh" title="Click to watch a how-to video" target="_blank">Thigh</a><input type="text" placeholder="cm" /></p>
+        <p><a href="http://youtu.be/aeoMJj53ujQ" class="lower-leg" title="Click to watch a how-to video" target="_blank">Lower leg</a><input type="text" placeholder="cm" /></p>
+        <p><a href="http://youtu.be/DgLBwA7n-Ug" class="sternal-notch" title="Click to watch a how-to video" target="_blank">Sternal notch</a><input type="text" placeholder="cm" /></p>
+        <p><a href="http://youtu.be/mz2UxbRCmbs" class="total-height" title="Click to watch a how-to video" target="_blank">Total height</a><input type="text" placeholder="cm" /></p>
+        <input type="submit" class="btn btn-success btn-large" />
+    </form>
+    <div class="how-to">
+      <a href="#" id="inseam" title="Actual inseam" style="position:absolute;top:176px;left:144px;height:122px;width:0px;"></a>
+      <a href="#" id="trunk" title="Trunk" style="position:absolute;top:92px;left:173px;height:105px;width:0px;"></a>
+      <a href="#" id="forearm" title="Forearm" style="position:absolute;top:112px;left:55px;height:0px;width:38px;"></a>
+      <a href="#" id="arm" title="Arm" style="position:absolute;top:97px;left:54px;height:0px;width:78px;"></a>
+      <a href="#" id="thigh" title="Thigh" style="position:absolute;top:187px;left:128px;height:40px;width:0px;"></a>
+      <a href="#" id="lower-leg" title="Lower leg" style="position:absolute;top:225px;left:165px;height:73px;width:0px;"></a>
+      <a href="#" id="sternal-notch" title="Sternal notch" style="position:absolute;top:88px;left:148px;height:210px;width:0px;"></a>
+      <a href="#" id="total-height" title="Total height" style="position:absolute;top:53px;left:136px;height:245px;width:0px;"></a>
+    </div>
+</div>
 
-<a href="#person/<%= id %>/mutualfriends" class="btn">Mutual Friends</a>
-<a href="#person/<%= id %>/friends" class="btn">Friends</a>
-<a href="#person/<%= id %>/feed" class="btn">Feed</a>
+<div class="info">
+  <div class="left">
+    <h3>Your Measurements</h3>
+    <dl>
+      <dt>Actual inseam</dt>
+      <dd>55cm</dd>
+      <dt>Trunk</dt>
+      <dd>55cm</dd>
+      <dt>Forearm</dt>
+      <dd>55cm</dd>
+      <dt>Arm</dt>
+      <dd>55cm</dd>
+      <dt>Thigh</dt>
+      <dd>55cm</dd>
+      <dt>Lower leg</dt>
+      <dd>55cm</dd>
+      <dt>Sternal Notch</dt>
+      <dd>55cm</dd>
+      <dt>Total height</dt>
+      <dd>55cm</dd>
+    </dl>
+    <a class="btn edit" href="#">Edit</a>
+  </div>
+  <div class="right">
+    <h3>Your Fit Summary</h3>
+    <div class="fit"><label>Fit Style</label><select><option>The XC Fit</option></select></div>
+    <dl>
+      <dt>Standover Height Range</dt><dd>19.4-19.8 inches</dd>
+      <dt>Virtual top Tube Length</dt><dd>19.4-19.8 inches</dd>
+      <dt>Stem Length</dt><dd>19.4-19.8 inches</dd>
+      <dt>BB Saddle Position</dt><dd>19.4-19.8 inches</dd>
+      <dt>Saddle Handlebar</dt><dd>19.4-19.8 inches</dd>
+    </dl>
+  </div>
+</div>
+
+<style type="text/css">
+  
+    .node {
+    cursor: pointer;
+  }
+
+  .overlay{
+      background-color:#EEE;
+  }
+   
+  .node circle {
+    fill: #666;
+    stroke: steelblue;
+    stroke-width: 1.5px;
+  }
+   
+  .node text {
+    font-size:10px; 
+    font-family:sans-serif;
+  }
+   
+  .link {
+    fill: none;
+    stroke: #ccc;
+    stroke-width: 1.5px;
+  }
+
+  .templink {
+    fill: none;
+    stroke: red;
+    stroke-width: 3px;
+  }
+
+  .ghostCircle.show{
+      display:block;
+  }
+
+  .ghostCircle, .activeDrag .ghostCircle{
+       display: none;
+  }
+
+</style>
+<script src="js/dndTree.js"></script>
+<br>
+<div id="tree-container"></div>
+<!-- Large modal -->
+
+<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="productHolder">
+        <h1 id="pruductTitle"></h1>
+        <img id="pruductImage" src="">
+        <button class="btn btn-large btn-primary post" id="shareMe">Share</button>
+        <div id="pruductDesc">
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

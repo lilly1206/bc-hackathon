@@ -255,6 +255,7 @@ form a:hover {
   width: 7rem;
   float: right;
 }
+
 /* line 2, ../sass/_about.scss */
 #aboutUs .image-profile {
   width: 20%;
@@ -275,4 +276,13 @@ form a:hover {
   overflow-y: scroll;
   height: 400px;
   padding: 15px;
+}
+
+/* line 21, ../sass/_about.scss */
+.info-holder {
+  width: 50%;
+}
+/* line 23, ../sass/_about.scss */
+.info-holder table {
+  width: 50%;
 }
